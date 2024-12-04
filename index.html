@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Portafolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">Mi Nombre</div>
+        <nav>
+            <ul>
+                <li><a href="#about">Sobre mí</a></li>
+                <li><a href="#skills">Habilidades</a></li>
+                <li><a href="#projects">Proyectos</a></li>
+                <li><a href="#testimonials">Testimonios</a></li>
+                <li><a href="#contact">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- About Me -->
+    <section id="about" class="section">
+        <div class="section-content">
+            <h2>Sobre mí</h2>
+            <p>¡Hola! Soy un desarrollador web con experiencia en creación de aplicaciones modernas y funcionales. Mi pasión por la tecnología me impulsa a estar siempre aprendiendo nuevas habilidades y creando proyectos innovadores.</p>
+            <p>Me especializo en desarrollo frontend y backend, trabajando con tecnologías como HTML, CSS, JavaScript, React, Node.js, y bases de datos como PostgreSQL y MySQL.</p>
+        </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" class="section">
+        <div class="section-content">
+            <h2>Habilidades</h2>
+            <div class="skills-container">
+                <div class="skill">
+                    <h3>Frontend</h3>
+                    <ul>
+                        <li>HTML5</li>
+                        <li>CSS3</li>
+                        <li>JavaScript</li>
+                        <li>React</li>
+                        <li>Vue.js</li>
+                    </ul>
+                </div>
+                <div class="skill">
+                    <h3>Backend</h3>
+                    <ul>
+                        <li>Node.js</li>
+                        <li>Express</li>
+                        <li>Python (Django, Flask)</li>
+                        <li>PHP</li>
+                    </ul>
+                </div>
+                <div class="skill">
+                    <h3>Bases de Datos</h3>
+                    <ul>
+                        <li>MySQL</li>
+                        <li>PostgreSQL</li>
+                        <li>SQLite</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="section">
+        <div class="section-content">
+            <h2>Mis Proyectos</h2>
+            <div class="project-card" id="project1">
+                <img src="project1.jpg" alt="Proyecto 1">
+                <div class="project-info">
+                    <h3>Proyecto 1</h3>
+                    <p>Descripción breve del proyecto.</p>
+                    <a href="https://github.com/mi-repositorio" target="_blank">Ver en GitHub</a>
+                </div>
+            </div>
+
+            <div class="project-card" id="project2">
+                <img src="project2.jpg" alt="Proyecto 2">
+                <div class="project-info">
+                    <h3>Proyecto 2</h3>
+                    <p>Descripción breve del proyecto.</p>
+                    <a href="https://github.com/mi-repositorio" target="_blank">Ver en GitHub</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section id="testimonials" class="section">
+        <div class="section-content">
+            <h2>Testimonios</h2>
+            <div class="testimonial">
+                <p>"Trabajar con [Tu Nombre] fue una experiencia increíble. Es un desarrollador talentoso, comprometido y siempre enfocado en entregar soluciones efectivas." - Cliente 1</p>
+            </div>
+            <div class="testimonial">
+                <p>"El proyecto que desarrolló superó nuestras expectativas. Su habilidad para integrar tecnologías y crear interfaces amigables es impresionante." - Cliente 2</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section">
+        <div class="section-content">
+            <h2>Contacto</h2>
+            <form id="contactForm">
+                <input type="text" id="name" placeholder="Tu nombre" required>
+                <input type="email" id="email" placeholder="Tu email" required>
+                <textarea id="message" placeholder="Tu mensaje" required></textarea>
+                <button type="submit">Enviar</button>
+            </form>
+            <div id="formMessage" style="color: red;"></div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Mi Portafolio</p>
+        <p><a href="mailto:miemail@example.com">Contáctame</a></p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
