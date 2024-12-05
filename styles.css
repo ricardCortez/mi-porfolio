@@ -1,19 +1,23 @@
 /* General Styles */
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     background-color: #f1eccb;
     color: #333;
+    scroll-behavior: smooth;
 }
 
 /* Header */
 header {
-    background-color: #222;
+    background-color: rgba(34, 34, 34, 0.9); /* Fondo semi-transparente */
     color: white;
     padding: 15px 0;
-    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 header .logo {
@@ -24,31 +28,35 @@ header .logo {
 nav ul {
     list-style: none;
     padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
 }
 
-nav ul li {
-    display: inline;
-    margin: 0 15px;
-}
-
-nav a {
+nav ul li a {
     color: white;
     text-decoration: none;
     font-size: 1.1em;
+    transition: color 0.3s ease;
 }
 
-nav a:hover {
-    text-decoration: underline;
+nav ul li a:hover {
+    color: #f1eccb; /* Color de acento */
 }
 
 /* Section Styles */
 .section {
-    padding: 50px 0;
+    padding: 60px 0;
     text-align: center;
+    background-color: #ffffff;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .section-content {
-    width: 80%;
+    width: 90%;
     max-width: 1000px;
     margin: 0 auto;
 }
@@ -56,37 +64,37 @@ nav a:hover {
 h2 {
     font-size: 2.5em;
     margin-bottom: 20px;
+    color: #222;
+    text-transform: uppercase;
 }
 
 /* Skills */
 .skills-container {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     flex-wrap: wrap;
+    gap: 20px;
 }
 
 .skill {
-    width: 30%;
-    background-color: #fff;
+    flex: 1;
+    min-width: 250px;
+    background-color: #f9f9f9;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 20px;
-    margin: 10px 0;
 }
 
 .skill h3 {
-    font-size: 1.6em;
+    font-size: 1.5em;
     margin-bottom: 10px;
-}
-
-.skill ul {
-    list-style-type: none;
-    padding: 0;
+    color: #333;
 }
 
 .skill ul li {
-    font-size: 1.1em;
-    margin-bottom: 8px;
+    font-size: 1em;
+    color: #666;
+    margin-bottom: 5px;
 }
 
 /* Project Card */
@@ -96,56 +104,42 @@ h2 {
     align-items: center;
     background-color: #fff;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin-bottom: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin: 20px 0;
     padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .project-card img {
     width: 100%;
-    max-height: 300px;
+    max-height: 250px;
     object-fit: cover;
     border-radius: 8px;
-}
-
-.project-info {
-    text-align: center;
-    padding: 10px;
+    margin-bottom: 10px;
 }
 
 .project-info a {
-    color: #333;
+    display: inline-block;
+    padding: 10px 20px;
+    color: white;
+    background-color: #222;
+    border-radius: 5px;
     text-decoration: none;
-    font-weight: bold;
+    transition: background-color 0.3s ease;
 }
 
 .project-info a:hover {
-    text-decoration: underline;
-}
-
-/* Testimonials */
-.testimonial {
-    background-color: #f9f9f9;
-    padding: 15px;
-    margin-bottom: 15px;
-    border-left: 4px solid #333;
-}
-
-.testimonial p {
-    font-size: 1.1em;
-    font-style: italic;
-    color: #555;
+    background-color: #444;
 }
 
 /* Contact Form */
-form {
-    display: flex;
-    flex-direction: column;
-    max-width: 500px;
-    margin: 0 auto;
-}
-
 form input, form textarea {
+    width: 100%;
     margin-bottom: 15px;
     padding: 12px;
     border-radius: 5px;
@@ -154,17 +148,18 @@ form input, form textarea {
 }
 
 form button {
-    background-color: #333;
+    padding: 12px 20px;
+    background-color: #222;
     color: white;
-    padding: 12px;
-    border-radius: 5px;
     border: none;
-    font-size: 1.2em;
+    border-radius: 5px;
     cursor: pointer;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease;
 }
 
 form button:hover {
-    background-color: #555;
+    background-color: #444;
 }
 
 /* Footer */
@@ -172,14 +167,73 @@ footer {
     background-color: #222;
     color: white;
     text-align: center;
-    padding: 10px 0;
+    padding: 15px 0;
 }
 
 footer a {
-    color: white;
+    color: #f1eccb;
     text-decoration: none;
+    transition: color 0.3s ease;
 }
 
 footer a:hover {
-    text-decoration: underline;
+    color: white;
+}
+
+
+/* Experience Section */
+#experience .job {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#experience .job:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+#experience h3 {
+    font-size: 1.6em;
+    margin-bottom: 5px;
+    color: #222;
+}
+
+#experience p {
+    font-size: 1em;
+    color: #666;
+    margin: 5px 0;
+}
+
+/* Education Section */
+#education ul {
+    list-style: none;
+    padding: 0;
+}
+
+#education li {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 15px 20px;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#education li:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+#education li strong {
+    font-size: 1.2em;
+    color: #222;
+}
+
+#education li span {
+    font-size: 0.9em;
+    color: #777;
 }
